@@ -1,13 +1,14 @@
 import 'dart:async';
 import 'dart:typed_data';
-import 'package:open_file/src/common/open_result.dart';
+import 'package:open_file_2/src/common/open_result.dart';
 
 import 'web.dart' as web;
 
 class OpenFile {
   OpenFile._();
+
   ///[filePath] You need to pass the file name to determine the file type
-  static Future<OpenResult> open(String? filePath, 
+  static Future<OpenResult> open(String? filePath,
       {String? type,
       String? uti,
       String linuxDesktopName = "xdg",
@@ -20,7 +21,8 @@ class OpenFile {
           message: _b ? "done" : "there are some errors when open $filePath");
     } else {
       return OpenResult(
-          type: ResultType.error, message: "filePath and webData can not be null or empty");
+          type: ResultType.error,
+          message: "filePath and webData can not be null or empty");
     }
   }
 }

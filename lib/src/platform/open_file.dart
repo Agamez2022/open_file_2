@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-import 'package:open_file/src/common/open_result.dart';
+import 'package:open_file_2/src/common/open_result.dart';
 import 'windows.dart' as windows;
 import 'linux.dart' as linux;
 
@@ -11,6 +11,7 @@ class OpenFile {
   static const MethodChannel _channel = const MethodChannel('open_file');
 
   OpenFile._();
+
   ///[filePath] On web you need to pass the file name to determine the file type
   ///[linuxDesktopName] like 'xdg'/'gnome'
   static Future<OpenResult> open(String? filePath,
